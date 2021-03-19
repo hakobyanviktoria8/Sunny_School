@@ -1,0 +1,23 @@
+{
+  "name": "Sunny_School",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hakobyanviktoria8/Sunny_School.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hakobyanviktoria8/Sunny_School/issues"
+  },
+  "homepage": "https://github.com/hakobyanviktoria8/Sunny_School#readme",
+  "dependencies": {
+    "random": "^3.0.3"
+  }
+}
