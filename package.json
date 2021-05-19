@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "run": "node 17.homeWork/hw17/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +19,6 @@
   },
   "homepage": "https://github.com/hakobyanviktoria8/Sunny_School#readme",
   "dependencies": {
-    "random": "^3.0.3"
+    "random": "^3.0.6"
   }
 }
