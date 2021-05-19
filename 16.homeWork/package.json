@@ -1,14 +1,25 @@
 {
-  "name": "homework1",
+  "name": "sunny_school",
   "version": "1.0.0",
-  "description": "fife homeworks",
-  "main": "homework1.js",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "random": "^3.0.6",
+    "upper-case": "^2.0.2"
+  },
+  "devDependencies": {},
   "scripts": {
+    "run": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Viktorya Hakobyan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hakobyanviktoria8/Sunny_School.git"
+  },
+  "author": "",
   "license": "ISC",
-  "dependencies": {
-    "random": "^2.2.0"
-  }
+  "bugs": {
+    "url": "https://github.com/hakobyanviktoria8/Sunny_School/issues"
+  },
+  "homepage": "https://github.com/hakobyanviktoria8/Sunny_School#readme"
 }
