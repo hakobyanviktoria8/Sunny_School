@@ -65,8 +65,11 @@ const random = require("random");
 // console.log(os.networkInterfaces());
 //hw3
 // const name = random.int(10000000, 99999999);
-// fs.writeFile("17.homeWork/hw17/"+name+".txt", JSON.stringify(os.cpus()), ()=>{
+// fs.writeFile("17.homeWork/hw17/"+name+".txt", JSON.stringify(os.cpus()), (err)=>{
 //     console.log("Done");
+// if(err){
+//     console.log(err.message);
+// }
 // });
 //
 // console.log(os.cpus());
