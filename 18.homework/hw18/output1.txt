@@ -1,0 +1,1 @@
+If we’re interested only in errors, then we can use null as the first argument: .then(null, errorHandlin

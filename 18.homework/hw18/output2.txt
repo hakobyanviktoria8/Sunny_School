@@ -1,0 +1,2 @@
+gFunction). Or we can use .catch(errorHandlingFunction), which is exactly the same:
+12345678900987654321

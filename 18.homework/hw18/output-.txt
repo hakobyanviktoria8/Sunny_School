@@ -1,0 +1,1 @@
+If-we’re-interested-only-in-errors,-then-we-can-use-null-as-the-first-argument:-.then(null,-errorHandlingFunction).-Or-we-can-use-.catch(errorHandlingFunction),-which-is-exactly-the-same:--12345678900987654321
