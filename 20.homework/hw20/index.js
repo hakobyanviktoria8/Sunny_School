@@ -99,23 +99,41 @@ const fs = require('fs');
 //     console.log('Copy completed!')
 // });
 
-console.log("Going to get file info!");
-fs.stat('output.txt', function (err, stats) {
-    if (err) {
-        return console.log(err);
-    }
-    console.log(stats);
-    console.log("Got file info successfully!");
-
-    // Check file type
-    console.log("isFile ? " + stats.isFile());
-    console.log("isDirectory ? " + stats.isDirectory());
-
-});
-
-
+// console.log("Going to get file info!");
+// fs.stat('output.txt', function (err, stats) {
+//     if (err) {
+//         return console.log(err);
+//     }
+//     console.log(stats);
+//     console.log("Got file info successfully!");
+//
+//     // Check file type
+//     console.log("isFile ? " + stats.isFile());
+//     console.log("isDirectory ? " + stats.isDirectory());
+//
+// });
 
 
+// fs.open("./input.txt", "r+", (err, openFile) => {
+//     const buffer = Buffer.alloc(65536);
+//     console.log(buffer);
+//     fs.read(openFile, buffer, 0, 50, 0, (err, bytesRead) => {
+//         console.log(bytesRead);
+//         console.log(buffer.slice(0,bytesRead).toString());
+//         fs.write(openFile,buffer.slice(0,bytesRead),0,buffer.slice(0,bytesRead).length,()=>{
+//
+//         })
+//     })
+// });
+
+// const buffer = Buffer;
+// console.log(buffer.alloc(10));
 
 
-
+// fs.rename("./input.txt","./input1.txt",()=>{
+//     console.log("done");
+// });
+//
+// fs.unlink("./input1.txt",(err)=>{
+//     console.log(err.message);
+// });
