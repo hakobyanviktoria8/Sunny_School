@@ -3,6 +3,7 @@
 
 const fs = require("fs");
 const stream = require("stream");
+const {Transform} = require("stream");
 
 //1 exanak
 // fs.readFile("homework3.txt", "utf-8", (err, data) => {
@@ -34,16 +35,32 @@ const stream = require("stream");
 //     .then(data => console.log("Done"))
 //     .catch(err => console.log(err.message));
 
+//
+// 3exanak
+// function streamFunc() {
+//     const readStr = fs.createReadStream("./test.txt",{
+//         encoding:"utf-8"
+//     });
+//     const writeStr = fs.createWriteStream("./test100.txt");
+//     readStr.on("data",(chunk => {
+//         writeStr.write(chunk.toString().replace(/\,/g, ""))
+//     }));
+//     // read.pipe(write);
+//     // console.log("read",read);
+// }
+// streamFunc();
 
-function streamFunc() {
-    const readStr = fs.createReadStream("./test.txt",{
-        encoding:"utf-8"
+
+//4exanak
+function srteamTransfer() {
+    const readStr= fs.createReadStream("test.txt");
+    const writeStr = fs.createWriteStream("testTrasfer.txt");
+    const transform = new Transform({
+        transform(chunk,encoding,next){
+            this.push(chunk.toString().replace(/\,/g, ""));
+            next()
+        }
     });
-    const writeStr = fs.createWriteStream("./test100.txt");
-    readStr.on("data",(chunk => {
-        writeStr.write(chunk.toString().replace(/\,/g, ""))
-    }));
-    // read.pipe(write);
-    // console.log("read",read);
+    readStr.pipe(transform).pipe(writeStr)
 }
-streamFunc();
+srteamTransfer();
