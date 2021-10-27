@@ -77,3 +77,19 @@ cart.addProduct(
     })
 console.log(cart.products);
 console.log("Sum is ", cart.sum());
+
+
+// 6. Ունենք obj,prop , եթե obj ունի prop հտկ ջնջի ու վերադարձնի true ,հակառակ դեպքում  false
+function f6(obj, prop) {
+    if (obj.hasOwnProperty("prop")){
+        // console.log("Has", obj)
+        delete obj.prop
+        // console.log( obj)
+        return true
+    } else {
+        // console.log("Hasn't")
+        return false
+    }
+}
+
+console.log(f6({propk: "11", a: 1}));
