@@ -8,6 +8,7 @@ function hw2() {
     return arr
 }
 
+console.log(hw2())
 module.exports = hw2;
 
 
