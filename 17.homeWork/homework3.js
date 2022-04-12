@@ -3,10 +3,15 @@
 // քանակը(os.cpus()):
 
 
-const fs = require("fs");
-const random = require("random");
-const os = require("os");
+const random = require('random')
+const fs = require('fs')
+const os = require('os')
 
-const os_cpus_length = os.cpus().length;
-const name = random.int(10000000, 99999999);
-fs.writeFile(`${name}.txt`, os_cpus_length.toString(), err => err?.err.message);
+const name = Array.from(" ".repeat(8)).map(x=>x=random.int(0,9)).join("")
+
+fs.writeFile(`${name}.txt`, os.cpus().length.toString(), err => {
+    if (err) {
+      console.error(err)
+      return
+    }}
+)
