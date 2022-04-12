@@ -16,10 +16,15 @@ const readFileHw = fs.readFileSync('./homework1.js') +  fs.readFileSync('./homew
 
 fs.writeFileSync(name, readFileHw)   
 
+try{
+    throw error
+    console.log("try");
+} catch{ err=>
+    console.log("err")
+}
+let a=2
 
-
-
-
+console.log(a);
 
 
 
