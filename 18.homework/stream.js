@@ -46,6 +46,7 @@ const {Readable,Writable,Duplex,Transform} = require('stream')
 //     }
 // })
 
+// readable strem
 const inStream = new Readable()
 
 inStream.push('ABCDEFGHIJKLM');
@@ -54,3 +55,34 @@ inStream.push('NOPQRSTUVWXYZ');
 inStream.push(null); // No more data
 
 inStream.pipe(process.stdout);
+
+
+// writable stream
+const outStream = new Writable({
+    write(chunk, encoding, callback) {
+      console.log(chunk.toString());
+      callback();
+    }
+  });
+  process.stdin.pipe(outStream);
+  
+
+const file = fs.createWriteStream('file.txt');
+for (let i = 0; i < 10; i++) {
+    file.write('Hello world ' + i);
+}
+file.end();
+
+
+// duplex stream
+
+const inoutStream = new Duplex(
+    {
+      write(chunk, encoding, callback) {},
+    read(size) {}
+    
+      
+      
+    });
+    // slide 29 video 1:34
+    
